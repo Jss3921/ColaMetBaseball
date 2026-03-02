@@ -265,3 +265,275 @@ body{
   .grid{ grid-template-columns: 1fr; }
   .hero-inner{ padding: 22px; }
 }
+:root{
+  --mint:#cffff7;
+  --nav:#dffdfa;
+  --panel:#d9d9d9;
+  --panel2:#cfcfcf;
+  --dark:#0b1f1f;
+}
+
+body{
+  background: var(--mint);
+  color: var(--dark);
+}
+
+header{
+  background: var(--nav);
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+
+.nav a{
+  color: #0b1f1f;
+  opacity: 0.85;
+}
+
+.nav a:hover{ opacity: 1; }
+
+.nav a.active{
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.brand-badge{
+  background: #0b7d7d;
+  border-radius: 8px;
+}
+
+.brand{
+  gap: 10px;
+}
+
+.brand small{
+  display:block;
+  font-weight: 700;
+  font-size: 11px;
+  opacity: .9;
+}
+
+.page-title{
+  text-align:center;
+  margin: 26px 0 6px;
+}
+
+/* Title with outline-ish look (valid CSS via text-shadow) */
+.title-outline{
+  font-size: 40px;
+  margin: 0;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  text-shadow:
+    -2px -2px 0 #ffffff,
+     2px -2px 0 #ffffff,
+    -2px  2px 0 #ffffff,
+     2px  2px 0 #ffffff,
+     0px  3px 0 rgba(0,0,0,0.15);
+}
+
+.subtitle{
+  text-align:center;
+  margin: 6px auto 18px;
+  max-width: 760px;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.panel{
+  background: var(--panel);
+  border: 1px solid rgba(0,0,0,0.18);
+  border-radius: 18px;
+  padding: 14px;
+}
+
+.panel-title{
+  font-size: 14px;
+  font-weight: 900;
+  margin: 0 0 10px;
+}
+
+.leaderboards{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 6px;
+}
+
+.leaderboards ul{
+  margin: 0;
+  padding-left: 16px;
+  font-size: 13px;
+}
+
+.searchbar{
+  margin: 14px 0;
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  background: var(--panel2);
+  border: 1px solid rgba(0,0,0,0.18);
+  border-radius: 10px;
+  padding: 8px 10px;
+}
+
+.searchbar input{
+  width: 100%;
+  border: 0;
+  background: transparent;
+  outline: none;
+  font-size: 13px;
+}
+
+.table-wrap{
+  background: var(--panel);
+  border: 1px solid rgba(0,0,0,0.18);
+  border-radius: 14px;
+  overflow:hidden;
+}
+
+.table{
+  width:100%;
+  border-collapse: collapse;
+  background: transparent;
+}
+
+.table th, .table td{
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+  font-size: 13px;
+}
+
+.table th{
+  font-weight: 900;
+}
+
+.badge-rank{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  background: rgba(0,0,0,0.08);
+  font-weight: 900;
+}
+
+.two-col{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.info-row{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+  font-size: 13px;
+}
+
+.info-row:last-child{ border-bottom: 0; }
+
+.icon{
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+}
+
+.form-card{
+  background: var(--panel);
+  border: 1px solid rgba(0,0,0,0.18);
+  border-radius: 18px;
+  padding: 14px;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+label{
+  display:block;
+  font-size: 12px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+input, textarea{
+  width:100%;
+  border: 1px solid rgba(0,0,0,0.18);
+  border-radius: 10px;
+  padding: 9px 10px;
+  font-size: 13px;
+  background: rgba(255,255,255,0.6);
+}
+
+textarea{
+  min-height: 88px;
+  resize: vertical;
+}
+
+.form-actions{
+  display:flex;
+  justify-content:flex-end;
+  margin-top: 10px;
+}
+
+.btn{
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+footer{
+  background: var(--nav);
+  border-top: 1px solid rgba(0,0,0,0.15);
+}
+
+@media (max-width: 900px){
+  .leaderboards{ grid-template-columns: 1fr; }
+  .two-col{ grid-template-columns: 1fr; }
+}
+.hero-image{
+  margin: 20px 0;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.15);
+}
+
+.hero-image img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.home-links{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.home-card{
+  background: #d9d9d9;
+  border-radius: 18px;
+  padding: 18px;
+  text-decoration: none;
+  color: #0b1f1f;
+  border: 1px solid rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
+}
+
+.home-card:hover{
+  transform: translateY(-4px);
+}
+
+.home-card h2{
+  margin-top: 0;
+}
+
+@media (max-width: 900px){
+  .home-links{
+    grid-template-columns: 1fr;
+  }
+}
